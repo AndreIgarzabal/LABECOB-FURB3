@@ -1,4 +1,4 @@
-# install.packages("WDI")
+install.packages("WDI")
 library("WDI")
 # sempre procurar por as vignettes
 # paginas com orientações dos pacotes
