@@ -1,0 +1,27 @@
+# install.packages("WDI")
+library("WDI")
+# sempre procurar por as vignettes
+# paginas com orientações dos pacotes
+
+# baixar os dados do pib
+# tudo que é produzido em um pais/estado/mun
+# em um determinado periodo
+
+# GDP (current US$)(NY.GDP.MKTP.CD)
+# GROSS DOMESTIC PRODUCT (GDP) EM DOLARES NORTE-AMERICANOS
+# CODIGO NY.GDP.MKTP.CD
+
+COD_GDP <- WDIsearch('gdp')
+# é importante procurar pelo proprio
+# site do banco mundial, é mais 
+# eficiente
+
+# COM O CODIGO, VAMOS BAIXAR OS DADOS
+
+options(scipen = 999) # AJUSTAR NUMEROS NOTAÇÃO CIENTIFICA
+basepib <- WDI(country = 'all',
+               indicator = 'NY.GDP.MKTP.CD')
+
+basepib2023 <- WDI(country = 'all',
+               indicator = 'NY.GDP.MKTP.CD',
+               start = 2023, end = 2023)
